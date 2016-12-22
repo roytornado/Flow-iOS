@@ -1,5 +1,8 @@
 import Foundation
 
+public typealias FlowWillStartBlock = (Flow) -> Void
+public typealias FlowDidFinishBlock = (Flow) -> Void
+
 public class Flow {
   
   let internalOperationQueue = OperationQueue()
@@ -7,6 +10,12 @@ public class Flow {
   private var currentNodeIndex = 0
   
   public var dataBucket = [String: Any]()
+  public var isSuccess = true
+  public var failedInfo: Any?
+
+  
+  private var willStartBlock: FlowWillStartBlock?
+  private var didFinishBlock: FlowDidFinishBlock?
   
   public init() {
     setup()
@@ -20,6 +29,16 @@ public class Flow {
     return self
   }
   
+  public func setWillStartBlock(block: @escaping FlowWillStartBlock) -> Flow {
+    willStartBlock = block
+    return self
+  }
+  
+  public func setDidFinishBlock(block: @escaping FlowDidFinishBlock) -> Flow {
+    didFinishBlock = block
+    return self
+  }
+  
   public func add(operation: FlowOperation, case: FlowCase? = nil) -> Flow {
     treeNodes.append(FlowOperationTreeNode(singleOperation: operation))
     return self
@@ -28,6 +47,7 @@ public class Flow {
   public func start() {
     currentNodeIndex = 0
     pickOperationToRun()
+    callWillStartBlockAtMain()
   }
   
   public func operationWillStart(operation: FlowOperation) {
@@ -37,15 +57,25 @@ public class Flow {
   public func operationDidFinish(operation: FlowOperation) {
     Flow.log(message: "operationDidFinish \(operation.displayName)")
     currentNodeIndex = currentNodeIndex + 1
-    pickOperationToRun()
+    
+    if currentNodeIndex < treeNodes.count {
+      pickOperationToRun()
+    } else {
+      callDidFinishBlockAtMain()
+    }
   }
   
   public func operationDidFailDueToInsufficientInputData(operation: FlowOperation) {
     Flow.log(message: "operationDidFailDueToInsufficientInputData \(operation.displayName)")
+    isSuccess = false
+    callDidFinishBlockAtMain()
   }
   
-  public func operationDidFail(operation: FlowOperation) {
+  public func operationDidFail(operation: FlowOperation, failedInfo: Any? = nil) {
     Flow.log(message: "operationDidFail \(operation.displayName)")
+    isSuccess = false
+    self.failedInfo = failedInfo
+    callDidFinishBlockAtMain()
   }
   
   // MARK: Private
@@ -54,6 +84,18 @@ public class Flow {
     if let singleOperation = currentNode.singleOperation {
       singleOperation.flowManager = self
       internalOperationQueue.addOperation(singleOperation)
+    }
+  }
+  
+  private func callWillStartBlockAtMain() {
+    DispatchQueue.main.async {
+      self.willStartBlock?(self)
+    }
+  }
+  
+  private func callDidFinishBlockAtMain() {
+    DispatchQueue.main.async {
+      self.didFinishBlock?(self)
     }
   }
  
