@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Flow_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R4y-Ml-zQU">
+                                <rect key="frame" x="0.0" y="20" width="375" height="447"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Uoo-td-TH1">
+                                        <rect key="frame" x="16" y="0.0" width="343" height="518.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VFP-7q-zAY">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="67"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3L6-Fa-LNL">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="5Dt-Hg-CNG"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Simple Chained Flow"/>
+                                                        <connections>
+                                                            <action selector="simpleChainedFlow" destination="vXZ-lx-hvc" eventType="touchUpInside" id="67Y-jS-dxv"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="demo of executing two chained operations " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hk-dO-f5L">
+                                                        <rect key="frame" x="0.0" y="50" width="343" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4WX-yf-lGQ">
+                                                <rect key="frame" x="0.0" y="67" width="343" height="67"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c79-KC-jdY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="2Ui-aN-rAh"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Login Success Demo"/>
+                                                        <connections>
+                                                            <action selector="demoLoginSuccess" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9Nh-mW-pTM"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="demo of login and load profile with success" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7a-Ew-gUh">
+                                                        <rect key="frame" x="0.0" y="50" width="343" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VbJ-3t-k1c">
+                                                <rect key="frame" x="0.0" y="134" width="343" height="83.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqe-XL-z42">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="vlY-KC-laD"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Login With Missing Data"/>
+                                                        <connections>
+                                                            <action selector="demoLoginFlowWithMissingData" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Hd7-QA-zAH"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MockAsyncLoginSuccessOp requires email but not exist in data bucket" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4iL-vS-fiZ">
+                                                        <rect key="frame" x="0.0" y="50" width="343" height="33.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xMX-MK-jiL">
+                                                <rect key="frame" x="0.0" y="217.5" width="343" height="83.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRd-cg-QzY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="2mJ-8Z-Fq9"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Login With Incorrect Data Type"/>
+                                                        <connections>
+                                                            <action selector="demoLoginFlowWithIncorrectDataType" destination="vXZ-lx-hvc" eventType="touchUpInside" id="HvW-ur-H2n"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MockAsyncLoginSuccessOp requires password with String type but it's Int in data bucket" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KOY-ot-L6g">
+                                                        <rect key="frame" x="0.0" y="50" width="343" height="33.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dSz-lC-biT">
+                                                <rect key="frame" x="0.0" y="301" width="343" height="67"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpF-xJ-8dO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="Zib-3c-RCR"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Login Fail Demo"/>
+                                                        <connections>
+                                                            <action selector="demoLoginFail" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2SR-ZD-uQn"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="demo of login fail" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Mf-FQ-gvY">
+                                                        <rect key="frame" x="0.0" y="50" width="343" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uZT-6X-kS5">
+                                                <rect key="frame" x="0.0" y="368" width="343" height="83.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KlZ-7A-zYN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="zUu-nn-7Ul"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Dispatcher Demo"/>
+                                                        <connections>
+                                                            <action selector="demoDispatcher" destination="vXZ-lx-hvc" eventType="touchUpInside" id="HbS-Iy-y6C"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="demo of running a group of operations at the first step" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMt-ta-A4e">
+                                                        <rect key="frame" x="0.0" y="50" width="343" height="33.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1ES-Xb-sn7">
+                                                <rect key="frame" x="0.0" y="451.5" width="343" height="67"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpD-il-wL6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="cpz-k5-ZR9"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Simple Cases Demo"/>
+                                                        <connections>
+                                                            <action selector="demoCases" destination="vXZ-lx-hvc" eventType="touchUpInside" id="uvW-4M-qn0"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="demo of flow with cases" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CaO-6l-qlS">
+                                                        <rect key="frame" x="0.0" y="50" width="343" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Uoo-td-TH1" firstAttribute="width" secondItem="R4y-Ml-zQU" secondAttribute="width" constant="-32" id="Rc9-Pl-qLH"/>
+                                    <constraint firstAttribute="bottom" secondItem="Uoo-td-TH1" secondAttribute="bottom" id="Rgu-NR-saY"/>
+                                    <constraint firstItem="Uoo-td-TH1" firstAttribute="top" secondItem="R4y-Ml-zQU" secondAttribute="top" id="afd-ct-hPw"/>
+                                    <constraint firstAttribute="trailing" secondItem="Uoo-td-TH1" secondAttribute="trailing" constant="16" id="nCH-e1-cUx"/>
+                                    <constraint firstItem="Uoo-td-TH1" firstAttribute="leading" secondItem="R4y-Ml-zQU" secondAttribute="leading" constant="16" id="ohs-kI-zag"/>
+                                </constraints>
+                            </scrollView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNK-9q-VOH">
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="jeq-PF-Eyw"/>
+                                </constraints>
+                                <color key="textColor" red="0.23529411759999999" green="0.22352941179999999" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FNK-9q-VOH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="B2w-aA-u4r"/>
+                            <constraint firstAttribute="trailing" secondItem="FNK-9q-VOH" secondAttribute="trailing" id="Dvv-5c-WHM"/>
+                            <constraint firstAttribute="trailing" secondItem="R4y-Ml-zQU" secondAttribute="trailing" id="GHZ-Rk-l59"/>
+                            <constraint firstItem="FNK-9q-VOH" firstAttribute="top" secondItem="R4y-Ml-zQU" secondAttribute="bottom" id="NQC-i4-eW1"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="FNK-9q-VOH" secondAttribute="bottom" id="Wht-Dt-t2Q"/>
+                            <constraint firstItem="R4y-Ml-zQU" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="cV5-UA-Avw"/>
+                            <constraint firstItem="R4y-Ml-zQU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="ovs-Q8-HUo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="summaryTextView" destination="FNK-9q-VOH" id="Y39-qw-udU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

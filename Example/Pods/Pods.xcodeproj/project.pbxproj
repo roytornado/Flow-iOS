@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		168ACE413F88B489DA58AAFD74D74BDE /* FlowUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69176D81A2208A3189AD71EE9DDCB740 /* FlowUtils.swift */; };
+		309DA8977682D8F6911A8E3385613835 /* Pods-Flow_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 457F1042F65A5560F7F9617F2091F649 /* Pods-Flow_Example-dummy.m */; };
+		3247995DD38D169DDEAD1793A7C2B379 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		431D48EDC01D3501DEDE6DE40FEAB57E /* FlowCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DFB30F5692E6D75DFA373B465D616E /* FlowCase.swift */; };
+		4D5EDF1B941BCF55A3FAF57834E63E26 /* Flow-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ADA9545BC6C7FD8AC675D8A11B2E65A /* Flow-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55954865C9520FE296BB2A797F65B212 /* FlowOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC831C08C9F361D396C7AE292FA42E1 /* FlowOperation.swift */; };
+		6F2032B632D2F55F959135B885DDD6F8 /* Flow-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A0AE22D2FB0993C7CE45745961163 /* Flow-dummy.m */; };
+		B3DDE0928B23E44B978355EE599E7123 /* FlowOperationTreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72E5D5065D4EF24F7C5780DE5F7E0C7 /* FlowOperationTreeNode.swift */; };
+		BE3D3022EA57DEC14E3456301FB6C898 /* Pods-Flow_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 009E81468B4E0D33F671358AB9E30059 /* Pods-Flow_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E0C16D5D6D1B928AA80630B16B74E407 /* FlowGroupDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787AC0A4253489369CC8423B04ABF52F /* FlowGroupDispatcher.swift */; };
+		F8358CD6940F85646034E0099FDB98DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		FA8468FEDCDB10FB8640889B5E3EC6C1 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AFBF06F74CC92111B2E30B50B6453C /* Flow.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0EFAB0CCBE421CB40FCD40F293EA8414 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13816E9868799DD2937B550F2E49C27F;
+			remoteInfo = Flow;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		009E81468B4E0D33F671358AB9E30059 /* Pods-Flow_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Flow_Example-umbrella.h"; sourceTree = "<group>"; };
+		23916B6E71581AC5E988A4C15344130B /* Flow.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Flow.modulemap; sourceTree = "<group>"; };
+		2F0387B8CFBD290F2798C34C10C6230E /* Flow.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Flow.xcconfig; sourceTree = "<group>"; };
+		3049E3449DC4194BF6B9E3E4A4BBC614 /* Flow-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Flow-prefix.pch"; sourceTree = "<group>"; };
+		399AC03A3053CE4EBC233B980AD07A5F /* Pods-Flow_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Flow_Example.modulemap"; sourceTree = "<group>"; };
+		42C1B59E0BE882BCB92AEDA61451C7F3 /* Flow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Flow.framework; path = Flow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		457F1042F65A5560F7F9617F2091F649 /* Pods-Flow_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Flow_Example-dummy.m"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		67AFBF06F74CC92111B2E30B50B6453C /* Flow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
+		69176D81A2208A3189AD71EE9DDCB740 /* FlowUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FlowUtils.swift; sourceTree = "<group>"; };
+		7857E9D6C18CDC588028BC5500882E2C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		787AC0A4253489369CC8423B04ABF52F /* FlowGroupDispatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FlowGroupDispatcher.swift; sourceTree = "<group>"; };
+		7ADA9545BC6C7FD8AC675D8A11B2E65A /* Flow-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Flow-umbrella.h"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A09003280A2F3C9DA654576AEE62A413 /* Pods-Flow_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Flow_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		A5DFB30F5692E6D75DFA373B465D616E /* FlowCase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FlowCase.swift; sourceTree = "<group>"; };
+		AEF8841A63230F5B211257CC5E4C8FBE /* Pods-Flow_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Flow_Example-frameworks.sh"; sourceTree = "<group>"; };
+		B3359759C1A414705DCEF94023A1722B /* Pods-Flow_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Flow_Example-resources.sh"; sourceTree = "<group>"; };
+		C72E5D5065D4EF24F7C5780DE5F7E0C7 /* FlowOperationTreeNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FlowOperationTreeNode.swift; sourceTree = "<group>"; };
+		CCF051C926101A0615CC604FD46DDDDC /* Pods-Flow_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Flow_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		DEE4FFCDC59D977E78C0880BCCE84D9A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E09E5DEB6258E3C195E2627F2823D6C6 /* Pods_Flow_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Flow_Example.framework; path = "Pods-Flow_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAC831C08C9F361D396C7AE292FA42E1 /* FlowOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FlowOperation.swift; sourceTree = "<group>"; };
+		FA9A0AE22D2FB0993C7CE45745961163 /* Flow-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Flow-dummy.m"; sourceTree = "<group>"; };
+		FD148F8C96F801FF2FD1CA4B78DCEEE1 /* Pods-Flow_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Flow_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FD21ABEAC100A601774CBB56DB4FDE31 /* Pods-Flow_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Flow_Example.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7997A7737BC41DE285D8661A719BA572 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8358CD6940F85646034E0099FDB98DE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AA45028FF431BFB1053DC69DD233E60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3247995DD38D169DDEAD1793A7C2B379 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		174CF6829027D299D3DC2C43DFB6ABE5 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				819D5B8569576B6031673742BFB33BA1 /* Flow */,
+				FC4EB6E227FB0768C9B946B6362D0102 /* Support Files */,
+			);
+			name = Flow;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		1E7C507F6BDFAC5E45F1945752AF4B67 /* Pods-Flow_Example */ = {
+			isa = PBXGroup;
+			children = (
+				7857E9D6C18CDC588028BC5500882E2C /* Info.plist */,
+				399AC03A3053CE4EBC233B980AD07A5F /* Pods-Flow_Example.modulemap */,
+				FD148F8C96F801FF2FD1CA4B78DCEEE1 /* Pods-Flow_Example-acknowledgements.markdown */,
+				A09003280A2F3C9DA654576AEE62A413 /* Pods-Flow_Example-acknowledgements.plist */,
+				457F1042F65A5560F7F9617F2091F649 /* Pods-Flow_Example-dummy.m */,
+				AEF8841A63230F5B211257CC5E4C8FBE /* Pods-Flow_Example-frameworks.sh */,
+				B3359759C1A414705DCEF94023A1722B /* Pods-Flow_Example-resources.sh */,
+				009E81468B4E0D33F671358AB9E30059 /* Pods-Flow_Example-umbrella.h */,
+				CCF051C926101A0615CC604FD46DDDDC /* Pods-Flow_Example.debug.xcconfig */,
+				FD21ABEAC100A601774CBB56DB4FDE31 /* Pods-Flow_Example.release.xcconfig */,
+			);
+			name = "Pods-Flow_Example";
+			path = "Target Support Files/Pods-Flow_Example";
+			sourceTree = "<group>";
+		};
+		5AA0E4B1E8B04842C48FA45033E555A3 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				174CF6829027D299D3DC2C43DFB6ABE5 /* Flow */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				5AA0E4B1E8B04842C48FA45033E555A3 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				B5200C9B3589C41900A05F749820390A /* Products */,
+				F788FE5863AC7DB46625FE1FB4300AB6 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		819D5B8569576B6031673742BFB33BA1 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				C256CFAB70A387865BD9E6D2E47F61FA /* Classes */,
+			);
+			name = Flow;
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		B5200C9B3589C41900A05F749820390A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42C1B59E0BE882BCB92AEDA61451C7F3 /* Flow.framework */,
+				E09E5DEB6258E3C195E2627F2823D6C6 /* Pods_Flow_Example.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C256CFAB70A387865BD9E6D2E47F61FA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				67AFBF06F74CC92111B2E30B50B6453C /* Flow.swift */,
+				A5DFB30F5692E6D75DFA373B465D616E /* FlowCase.swift */,
+				787AC0A4253489369CC8423B04ABF52F /* FlowGroupDispatcher.swift */,
+				EAC831C08C9F361D396C7AE292FA42E1 /* FlowOperation.swift */,
+				C72E5D5065D4EF24F7C5780DE5F7E0C7 /* FlowOperationTreeNode.swift */,
+				69176D81A2208A3189AD71EE9DDCB740 /* FlowUtils.swift */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F788FE5863AC7DB46625FE1FB4300AB6 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1E7C507F6BDFAC5E45F1945752AF4B67 /* Pods-Flow_Example */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		FC4EB6E227FB0768C9B946B6362D0102 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				23916B6E71581AC5E988A4C15344130B /* Flow.modulemap */,
+				2F0387B8CFBD290F2798C34C10C6230E /* Flow.xcconfig */,
+				FA9A0AE22D2FB0993C7CE45745961163 /* Flow-dummy.m */,
+				3049E3449DC4194BF6B9E3E4A4BBC614 /* Flow-prefix.pch */,
+				7ADA9545BC6C7FD8AC675D8A11B2E65A /* Flow-umbrella.h */,
+				DEE4FFCDC59D977E78C0880BCCE84D9A /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Flow";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		10E59985601D00D5E4BA7777230F93D6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE3D3022EA57DEC14E3456301FB6C898 /* Pods-Flow_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C18F56A6142C9A4C0271ECB2111A886 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D5EDF1B941BCF55A3FAF57834E63E26 /* Flow-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		13816E9868799DD2937B550F2E49C27F /* Flow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3C2B08DF0147F7828CEA6CEE3A3ADA8 /* Build configuration list for PBXNativeTarget "Flow" */;
+			buildPhases = (
+				C5AE9EC1D368090241DE7C9804207B3C /* Sources */,
+				7997A7737BC41DE285D8661A719BA572 /* Frameworks */,
+				1C18F56A6142C9A4C0271ECB2111A886 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Flow;
+			productName = Flow;
+			productReference = 42C1B59E0BE882BCB92AEDA61451C7F3 /* Flow.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4C375E5F39DEEAC1704D3E83251F23B4 /* Pods-Flow_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94B9E6C87B9AE619F8F0AB3B7126B575 /* Build configuration list for PBXNativeTarget "Pods-Flow_Example" */;
+			buildPhases = (
+				8C1F2FECDA83EE9D238348082E8F2388 /* Sources */,
+				7AA45028FF431BFB1053DC69DD233E60 /* Frameworks */,
+				10E59985601D00D5E4BA7777230F93D6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				69C4E4B5467F4B9CB4868A6940E3E169 /* PBXTargetDependency */,
+			);
+			name = "Pods-Flow_Example";
+			productName = "Pods-Flow_Example";
+			productReference = E09E5DEB6258E3C195E2627F2823D6C6 /* Pods_Flow_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = B5200C9B3589C41900A05F749820390A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13816E9868799DD2937B550F2E49C27F /* Flow */,
+				4C375E5F39DEEAC1704D3E83251F23B4 /* Pods-Flow_Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8C1F2FECDA83EE9D238348082E8F2388 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				309DA8977682D8F6911A8E3385613835 /* Pods-Flow_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5AE9EC1D368090241DE7C9804207B3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F2032B632D2F55F959135B885DDD6F8 /* Flow-dummy.m in Sources */,
+				FA8468FEDCDB10FB8640889B5E3EC6C1 /* Flow.swift in Sources */,
+				431D48EDC01D3501DEDE6DE40FEAB57E /* FlowCase.swift in Sources */,
+				E0C16D5D6D1B928AA80630B16B74E407 /* FlowGroupDispatcher.swift in Sources */,
+				55954865C9520FE296BB2A797F65B212 /* FlowOperation.swift in Sources */,
+				B3DDE0928B23E44B978355EE599E7123 /* FlowOperationTreeNode.swift in Sources */,
+				168ACE413F88B489DA58AAFD74D74BDE /* FlowUtils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		69C4E4B5467F4B9CB4868A6940E3E169 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Flow;
+			target = 13816E9868799DD2937B550F2E49C27F /* Flow */;
+			targetProxy = 0EFAB0CCBE421CB40FCD40F293EA8414 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4E487F173E6C9664F4E9E26B9635D23C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		73FF773EE2275E34F6D16A352C4902E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD21ABEAC100A601774CBB56DB4FDE31 /* Pods-Flow_Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Flow_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Flow_Example/Pods-Flow_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Flow_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B5BC9A35703928261BE00662EB79B750 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F0387B8CFBD290F2798C34C10C6230E /* Flow.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Flow/Flow-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Flow/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Flow/Flow.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Flow;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BDD0139D6EB93FA375F887ABD62DAB2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C63ABBDD53C11AD6B431F39F0FF20F79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F0387B8CFBD290F2798C34C10C6230E /* Flow.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Flow/Flow-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Flow/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Flow/Flow.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Flow;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D77B422A4D54210A3A526EEC9C714C25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCF051C926101A0615CC604FD46DDDDC /* Pods-Flow_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Flow_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Flow_Example/Pods-Flow_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Flow_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E487F173E6C9664F4E9E26B9635D23C /* Debug */,
+				BDD0139D6EB93FA375F887ABD62DAB2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94B9E6C87B9AE619F8F0AB3B7126B575 /* Build configuration list for PBXNativeTarget "Pods-Flow_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D77B422A4D54210A3A526EEC9C714C25 /* Debug */,
+				73FF773EE2275E34F6D16A352C4902E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3C2B08DF0147F7828CEA6CEE3A3ADA8 /* Build configuration list for PBXNativeTarget "Flow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5BC9A35703928261BE00662EB79B750 /* Debug */,
+				C63ABBDD53C11AD6B431F39F0FF20F79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

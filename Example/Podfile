@@ -1,0 +1,9 @@
+use_frameworks!
+
+def pos
+  pod 'Flow', :path => '../'
+end
+
+target 'Flow_Example' do
+  pos
+end

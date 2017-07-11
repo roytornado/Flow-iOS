@@ -5,6 +5,7 @@ public class FlowCase {
   var value: String!
   
   public init(key: String, value: String) {
-    
+    self.key = key
+    self.value = value
   }
 }

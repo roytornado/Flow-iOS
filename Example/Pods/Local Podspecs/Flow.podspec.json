@@ -1,0 +1,22 @@
+{
+  "name": "Flow",
+  "version": "1.0.0",
+  "summary": "Make your logic flow and data flow clean and human readable.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/Flow",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Roy Ng": "roytornado@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/Flow.git",
+    "tag": "1.0.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Flow/Classes/**/*"
+}
