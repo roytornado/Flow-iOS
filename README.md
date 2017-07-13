@@ -23,13 +23,13 @@ So, we encapsulate operations as objects which can be chained using tree structu
 Here is an example for simple usage:
 ```swift
 @IBAction func simpleChainedFlow() {
-Flow()
-.add(operation: SimplePrintOp(message: "hello world"))
-.add(operation: SimplePrintOp(message: "good bye"))
-.setWillStartBlock(block: commonWillStartBlock())
-.setDidFinishBlock(block: commonDidFinishBlock())
-.start()
-}
+    Flow()
+      .add(operation: SimplePrintOp(message: "hello world"))
+      .add(operation: SimplePrintOp(message: "good bye"))
+      .setWillStartBlock(block: commonWillStartBlock())
+      .setDidFinishBlock(block: commonDidFinishBlock())
+      .start()
+  }
 ```
 In these 5 lines of code, we can know that two operations will be executed in serial and able to do something before and after the operations.
 
@@ -43,32 +43,32 @@ Also, all operations made for Flow should share a common suffix (e.g. Op) so all
 You can run a batch of operations using `FlowArrayGroupDispatcher`.
 ```swift
 Flow()
-.setDataBucket(dataBucket: ["images": ["a", "b", "c", "d"]])
-.addGrouped(operationCreator: UploadSingleImageOp.self, dispatcher: FlowArrayGroupDispatcher(inputKey: "images", outputKey: "imageURLs", maxConcurrentOperationCount: 3, allowFailure: false))
-.start()
+      .setDataBucket(dataBucket: ["images": ["a", "b", "c", "d"]])
+      .addGrouped(operationCreator: UploadSingleImageOp.self, dispatcher: FlowArrayGroupDispatcher(inputKey: "images", outputKey: "imageURLs", maxConcurrentOperationCount: 3, allowFailure: false))
+      .start()
 ```
 FlowArrayGroupDispatcher will dispatcher the targeted array in the data bucket to created operations and pass them the required data and collect them afterwards.
 
 ```swift
 import Flow
 class UploadSingleImageOp: FlowOperation, FlowOperationCreator {
-
-static func create() -> FlowOperation {
-return UploadSingleImageOp()
-}
-
-override var primaryInputParamKey: String { return "targetImageForUpload" }
-override var primaryOutputParamKey: String { return "uploadedImageUrl" }
-
-override func mainLogic() {
-guard let image: String = getData(name: primaryInputParamKey) else { return }
-DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(1)) {
-self.log(message: "simulation of upload single image callback")
-self.setData(name: self.primaryOutputParamKey, value: "url_of_" + image)
-self.finishSuccessfully()
-}
-startWithAsynchronous()
-}
+  
+  static func create() -> FlowOperation {
+    return UploadSingleImageOp()
+  }
+  
+  override var primaryInputParamKey: String { return "targetImageForUpload" }
+  override var primaryOutputParamKey: String { return "uploadedImageUrl" }
+  
+  override func mainLogic() {
+    guard let image: String = getData(name: primaryInputParamKey) else { return }
+    DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(1)) {
+      self.log(message: "simulation of upload single image callback")
+      self.setData(name: self.primaryOutputParamKey, value: "url_of_" + image)
+      self.finishSuccessfully()
+    }
+    startWithAsynchronous()
+  }
 }
 
 ```
@@ -83,19 +83,19 @@ If `allowFailure (optional, default = false)` is set to true, the Flow will cont
 Flow allow simple cases handling. For example:
 ```swift
 @IBAction func demoCases() {
-Flow()
-.setDataBucket(dataBucket: ["images": ["a", "b", "c", "d", 1], "target": "A"])
-.add(operation: SimplePrintOp(message: "Step1"))
-.add(operation: SimplePrintOp(message: "Step2A1"), flowCase: FlowCase(key: "target", value: "A"))
-.add(operation: SimplePrintOp(message: "Step2A2"))
-.add(operation: SimplePrintOp(message: "Step2B1"), flowCase: FlowCase(key: "target", value: "B"))
-.add(operation: SimplePrintOp(message: "Step2B2"))
-.combine()
-.add(operation: SimplePrintOp(message: "Step3"))
-.setWillStartBlock(block: commonWillStartBlock())
-.setDidFinishBlock(block: commonDidFinishBlock())
-.start()
-}
+    Flow()
+      .setDataBucket(dataBucket: ["images": ["a", "b", "c", "d", 1], "target": "A"])
+      .add(operation: SimplePrintOp(message: "Step1"))
+      .add(operation: SimplePrintOp(message: "Step2A1"), flowCase: FlowCase(key: "target", value: "A"))
+      .add(operation: SimplePrintOp(message: "Step2A2"))
+      .add(operation: SimplePrintOp(message: "Step2B1"), flowCase: FlowCase(key: "target", value: "B"))
+      .add(operation: SimplePrintOp(message: "Step2B2"))
+      .combine()
+      .add(operation: SimplePrintOp(message: "Step3"))
+      .setWillStartBlock(block: commonWillStartBlock())
+      .setDidFinishBlock(block: commonDidFinishBlock())
+      .start()
+  }
 ```
 After `Step1` is finished, the Flow will run `Step2A1` branch or `Step2B1` branch depend on the value of `target` in data bucket. And `combine` is used to combine all cases back to a single node `Step3`.
 
@@ -107,23 +107,23 @@ Also, the type of case value must be `String`.
 import Flow
 
 class MockAsyncLoginOp: FlowOperation {
-override func mainLogic() {
-guard let email: String = getData(name: "email") else { return }
-guard let password: String = getData(name: "password") else { return }
-
-DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(1)) {
-self.log(message: "simulation of login callback")
-if email == "test@gmail.com" && password == "123456" {
-let mockAccessToken = "sdaftadagasg"
-self.setData(name: "accessToken", value: mockAccessToken)
-self.finishSuccessfully()
-} else {
-let error = NSError(domain: "No such account", code: 404, userInfo: nil)
-self.finishWithError(error: error)
-}
-}
-startWithAsynchronous()
-}
+  override func mainLogic() {
+    guard let email: String = getData(name: "email") else { return }
+    guard let password: String = getData(name: "password") else { return }
+    
+    DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(1)) {
+      self.log(message: "simulation of login callback")
+      if email == "test@gmail.com" && password == "123456" {
+        let mockAccessToken = "sdaftadagasg"
+        self.setData(name: "accessToken", value: mockAccessToken)
+        self.finishSuccessfully()
+      } else {
+        let error = NSError(domain: "No such account", code: 404, userInfo: nil)
+        self.finishWithError(error: error)
+      }
+    }
+    startWithAsynchronous()
+  }
 }
 ```
 In MockAsyncLoginOp in the example, it require two input data from data bucket (`email` and `password`). The Flow will check if `the data exist` and if `the data type is correct` (i.e. they must be `String` for this case). If no data is found with correct type, the operation is marked as failure and the Flow will stop.
@@ -145,49 +145,49 @@ Making operation is easy:
 Some examples:
 ```swift
 class SimplePrintOp: FlowOperation {
-var message: String!
-
-init(message: String) {
-self.message = message
-}
-
-override func mainLogic() {
-log(message: message)
-finishSuccessfully()
-}
+  var message: String!
+  
+  init(message: String) {
+    self.message = message
+  }
+  
+  override func mainLogic() {
+    log(message: message)
+    finishSuccessfully()
+  }
 }
 
 class MockAsyncLoadProfileOp: FlowOperation {
-override func mainLogic() {
-guard let accessToken: String = getData(name: "accessToken") else { return }
-
-DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(1)) {
-self.log(message: "simulation of success load profile callback")
-self.setData(name: "profileRefreshDate", value: Date())
-self.finishSuccessfully()
-}
-startWithAsynchronous()
-}
+  override func mainLogic() {
+    guard let accessToken: String = getData(name: "accessToken") else { return }
+    
+    DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(1)) {
+      self.log(message: "simulation of success load profile callback")
+      self.setData(name: "profileRefreshDate", value: Date())
+      self.finishSuccessfully()
+    }
+    startWithAsynchronous()
+  }
 }
 
 class UploadSingleImageOp: FlowOperation, FlowOperationCreator {
-
-static func create() -> FlowOperation {
-return UploadSingleImageOp()
-}
-
-override var primaryInputParamKey: String { return "targetImageForUpload" }
-override var primaryOutputParamKey: String { return "uploadedImageUrl" }
-
-override func mainLogic() {
-guard let image: String = getData(name: primaryInputParamKey) else { return }
-DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(1)) {
-self.log(message: "simulation of upload single image callback")
-self.setData(name: self.primaryOutputParamKey, value: "url_of_" + image)
-self.finishSuccessfully()
-}
-startWithAsynchronous()
-}
+  
+  static func create() -> FlowOperation {
+    return UploadSingleImageOp()
+  }
+  
+  override var primaryInputParamKey: String { return "targetImageForUpload" }
+  override var primaryOutputParamKey: String { return "uploadedImageUrl" }
+  
+  override func mainLogic() {
+    guard let image: String = getData(name: primaryInputParamKey) else { return }
+    DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(1)) {
+      self.log(message: "simulation of upload single image callback")
+      self.setData(name: self.primaryOutputParamKey, value: "url_of_" + image)
+      self.finishSuccessfully()
+    }
+    startWithAsynchronous()
+  }
 }
 
 ```
@@ -198,23 +198,23 @@ With the Flow instance in the block, you can get `dataBucket: [String: Any]`, `i
 
 It's recommended to make common handling blocks which can further simplify your blueprint.
 ```swift
-func commonWillStartBlock(block: FlowWillStartBlock? = nil) -> FlowWillStartBlock {
-let result: FlowWillStartBlock = {
-flow in
-block?(flow)
-self.summaryTextView.text = "Flow Starting..."
-}
-return result
-}
-
-func commonDidFinishBlock(block: FlowDidFinishBlock? = nil) -> FlowDidFinishBlock {
-let result: FlowDidFinishBlock = {
-flow in
-block?(flow)
-self.summaryTextView.text = flow.generateSummary()
-}
-return result
-}
+  func commonWillStartBlock(block: FlowWillStartBlock? = nil) -> FlowWillStartBlock {
+    let result: FlowWillStartBlock = {
+      flow in
+      block?(flow)
+      self.summaryTextView.text = "Flow Starting..."
+    }
+    return result
+  }
+  
+  func commonDidFinishBlock(block: FlowDidFinishBlock? = nil) -> FlowDidFinishBlock {
+    let result: FlowDidFinishBlock = {
+      flow in
+      block?(flow)
+      self.summaryTextView.text = flow.generateSummary()
+    }
+    return result
+  }
 
 ```
 
