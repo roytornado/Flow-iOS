@@ -22,7 +22,7 @@
 /* Begin PBXFileReference section */
 		0D32DFD45C517DC47E08C7B9 /* Pods_Flow_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flow_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2608AF4CA072A0A8B9EED39D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		32CF13D8197844410DE0A626 /* Flow.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Flow.podspec; path = ../Flow.podspec; sourceTree = "<group>"; };
+		32CF13D8197844410DE0A626 /* Flow-iOS.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "Flow-iOS.podspec"; path = "../Flow-iOS.podspec"; sourceTree = "<group>"; };
 		520F927BD923005E8878AAFA /* Pods_Flow_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flow_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56B2F8881F0CD9F5005CC742 /* MockAsyncLoadProfileOp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockAsyncLoadProfileOp.swift; sourceTree = "<group>"; };
 		56B2F88A1F0CE5FD005CC742 /* UploadSingleImageOp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadSingleImageOp.swift; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				32CF13D8197844410DE0A626 /* Flow.podspec */,
+				32CF13D8197844410DE0A626 /* Flow-iOS.podspec */,
 				2608AF4CA072A0A8B9EED39D /* README.md */,
 				5F3EBA41F7A5A81A953FDC16 /* LICENSE */,
 			);

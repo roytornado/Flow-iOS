@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'Flow'
+  s.name             = 'Flow-iOS'
   s.version          = '1.0.0'
   s.summary          = 'Make your logic flow and data flow clean and human readable.'
 
@@ -18,13 +18,13 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Flow is an utility/ design pattern that help developers to write simple and readable codes. There are two main concerns: Flow of operations and Flow of data.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/Flow'
+  s.homepage         = 'https://github.com/roytornado/Flow-iOS'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Roy Ng' => 'roytornado@gmail.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/Flow.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/roytornado/Flow-iOS.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '8.0'
 

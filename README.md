@@ -8,6 +8,7 @@
 Flow is an utility/ design pattern that help developers to write simple and readable codes.
 There are two main concerns:
 `Flow of operations and Flow of data`
+
 By using Flow, we should able to achieve the followings:
 - Logics / operations can be reused easily
 - The logic flows are readable by anyone (including the code reviewers)
@@ -273,12 +274,13 @@ iOS 8.0
 
 Flow is available through [CocoaPods](http://cocoapods.org):
 ```ruby
-pod "Flow"
+pod "Flow-iOS"
 ```
 
 ## Author
 
 Roy Ng, roytornado@gmail.com @ Redso, https://www.redso.com.hk/
+
 Linkedin: https://www.linkedin.com/in/roy-ng-19427735/
 
 ## License
