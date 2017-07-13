@@ -51,7 +51,7 @@ Flow()
 FlowArrayGroupDispatcher will dispatcher the targeted array in the data bucket to created operations and pass them the required data and collect them afterwards.
 
 ```swift
-import Flow
+import Flow_iOS
 class UploadSingleImageOp: FlowOperation, FlowOperationCreator {
   
   static func create() -> FlowOperation {
@@ -105,7 +105,7 @@ Also, the type of case value must be `String`.
 
 ## Data Handling
 ```swift
-import Flow
+import Flow_iOS
 
 class MockAsyncLoginOp: FlowOperation {
   override func mainLogic() {
@@ -275,6 +275,11 @@ iOS 8.0
 Flow is available through [CocoaPods](http://cocoapods.org):
 ```ruby
 pod "Flow-iOS"
+```
+
+Import:
+```swift
+import Flow_iOS
 ```
 
 ## Author

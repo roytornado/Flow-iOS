@@ -1,7 +1,7 @@
 use_frameworks!
 
 def pos
-  pod 'Flow', :path => '../'
+  pod 'Flow-iOS', :path => '../'
 end
 
 target 'Flow_Example' do

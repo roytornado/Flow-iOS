@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double FlowVersionNumber;
-FOUNDATION_EXPORT const unsigned char FlowVersionString[];
+FOUNDATION_EXPORT double Flow_iOSVersionNumber;
+FOUNDATION_EXPORT const unsigned char Flow_iOSVersionString[];
 

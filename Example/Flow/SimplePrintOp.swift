@@ -1,4 +1,4 @@
-import Flow
+import Flow_iOS
 
 class SimplePrintOp: FlowOperation {
   var message: String!

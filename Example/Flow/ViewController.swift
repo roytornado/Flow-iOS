@@ -1,5 +1,5 @@
 import UIKit
-import Flow
+import Flow_iOS
 
 class ViewController: UIViewController {
   

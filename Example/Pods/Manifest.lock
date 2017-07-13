@@ -1,16 +1,16 @@
 PODS:
-  - Flow (1.0.0)
+  - Flow-iOS (1.0.0)
 
 DEPENDENCIES:
-  - Flow (from `../`)
+  - Flow-iOS (from `../`)
 
 EXTERNAL SOURCES:
-  Flow:
+  Flow-iOS:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Flow: 8e86addfe5ed4fb20c5aeeb73e16c83b8bcf5f4b
+  Flow-iOS: d93871e7e47f4a7a1bd48777d9bb02688a7a6cd1
 
-PODFILE CHECKSUM: 55f98d19865332d8332b6756d4fd4ad1c101382a
+PODFILE CHECKSUM: c8b5e23bba5e451bacb9edf2b1f30fbf38e27d5b
 
 COCOAPODS: 1.2.1

@@ -1,7 +1,7 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
-## Flow
+## Flow-iOS
 
 Copyright (c) 2016 Roy Ng <royng@redso.com.hk>
 

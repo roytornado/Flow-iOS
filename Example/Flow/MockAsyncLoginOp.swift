@@ -1,4 +1,4 @@
-import Flow
+import Flow_iOS
 
 class MockAsyncLoginOp: FlowOperation {
   override func mainLogic() {
