@@ -13,7 +13,7 @@ By using Flow, we should able to achieve the followings:
 - Logics / operations can be reused easily
 - The logic flows are readable by anyone (including the code reviewers)
 - Each line of codes is meaningfully and avoid ambiguous keywords
-- No more callback hell for complicated async opertions
+- No more callback hell for complicated async operations
 - Debuggable both at development and production stage
 
 Flow is referencing Composite pattern (https://en.wikipedia.org/wiki/Composite_pattern) and
@@ -73,11 +73,11 @@ class UploadSingleImageOp: FlowOperation, FlowOperationCreator {
 }
 
 ```
-For the above exmaple, FlowArrayGroupDispatcher will create a group of UploadSingleImageOp based on the array size of `images` in data bucket. As UploadSingleImageOp declares `targetImageForUpload` as it's input key and `uploadedImageUrl` as it's output key. FlowArrayGroupDispatcher will create temporary data bucket for each UploadSingleImageOp and contains `targetImageForUpload` inside. If the operation is succeed, FlowArrayGroupDispatcher will collect the object keyed with `uploadedImageUrl` and put into the result array `imageURLs`.
+For the above example, FlowArrayGroupDispatcher will create a group of UploadSingleImageOp based on the array size of `images` in data bucket. As UploadSingleImageOp declares `targetImageForUpload` as it's input key and `uploadedImageUrl` as it's output key. FlowArrayGroupDispatcher will create temporary data bucket for each UploadSingleImageOp and contains `targetImageForUpload` inside. If the operation is succeed, FlowArrayGroupDispatcher will collect the object keyed with `uploadedImageUrl` and put into the result array `imageURLs`.
 
 In such design, UploadSingleImageOp can be `reused as single operation or grouped operation`.
 
-You can also set the `maxConcurrentOperationCount (optional, default = 3)` to control whether the opertations are executed on one by one or in batch.
+You can also set the `maxConcurrentOperationCount (optional, default = 3)` to control whether the operations are executed on one by one or in batch.
 If `allowFailure (optional, default = false)` is set to true, the Flow will continue to run even some / all operations in the group are failed. Therefore, the output array may be shorter than the input array or even empty.
 
 ## Cases
