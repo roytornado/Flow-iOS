@@ -5,14 +5,14 @@
 [![Platform](https://img.shields.io/cocoapods/p/Flow.svg?style=flat)](http://cocoapods.org/pods/Flow)
 
 ## What's Flow
-Flow is an utility/ design pattern that help developers to write simple and readable codes.
+Flow is an utility/ design pattern that help developers to write simple and readable code.
 There are two main concerns:
 `Flow of operations and Flow of data`
 
 By using Flow, we should able to achieve the followings:
 - Logics / operations can be reused easily
 - The logic flows are readable by anyone (including the code reviewers)
-- Each line of codes is meaningfully and avoid ambiguous keywords
+- Each line of code is meaningfully and avoid ambiguous keywords
 - No more callback hell for complicated async operations
 - Debuggable both at development and production stage
 
@@ -35,8 +35,8 @@ Here is an example for simple usage:
 In these 5 lines of code, we can know that two operations will be executed in serial and able to do something before and after the operations.
 
 ## Naming
-To make the logic readable, it is important to make the operation's name meaningfully. It is developer's responsibility to make a good name. Also, the name also determine the degree of reusable of codes.
-e.g. If you create an operation named: `SimplePrintOp`, it should contain only the codes to print the message associated with it. You should NOT do anything out of the context of the name. Such as sending the message to server / write to file.
+To make the logic readable, it is important to make the operation's name meaningfully. It is developer's responsibility to make a good name. Also, the name also determine the degree of reusable of code.
+e.g. If you create an operation named: `SimplePrintOp`, it should contain only the code to print the message associated with it. You should NOT do anything out of the context of the name. Such as sending the message to server / write to file.
 
 Also, all operations made for Flow should share a common suffix (e.g. Op) so all developers can know that there are operations that ready for reuse.
 
@@ -263,7 +263,7 @@ You can trace the data changes, how the operations run in one place. You can sen
 
 ## Why not RxSwift?
 Surely RXsSwift is much more powerful in some aspects.
-BUT I think it's always good if we can make our codes: `Simple and Human readable`
+BUT I think it's always good if we can make our code: `Simple and Human readable`
 With `Flow`, even code reviewers and non-programmer can understand your logic in the blueprint.
 
 ## Requirements
