@@ -117,6 +117,7 @@ public class Flow {
       break
     case .withError(let error):
       log(message: "\(operation.displayName) DidFinish: withError: \(error)")
+      self.error = error
       stopingCaseHandling(operation: operation)
       break
     case .withInsufficientInputData(let message):
